@@ -1,8 +1,11 @@
 import Header from "./Header";
-
-const Home=()=>{
-    return(
-        <Header/>
-    )
-}
+import Code from "./Code";
+const Home = () => {
+  return (
+    <>
+      <Header />
+      <Code />
+    </>
+  )
+};
 export default Home;

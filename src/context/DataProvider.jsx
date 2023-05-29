@@ -1,26 +1,29 @@
-import { createContext, useState } from "react";
-const DataContext = createContext();
+import { createContext, useState } from 'react';
 
-const DataProvider = () => {
-  const [html, setHtml] = useState("");
-  const [css, setCss] = useState("");
-  const [js, setJs] = useState("");
 
-  return (
-    <DataContext.Provider
-      // this value block is used to send the state or values or export them to use in other component
-      value={{
-        html,
-        setHtml,
-        css,
-        setCss,
-        js,
-        setJs,
-      }}
-    ></DataContext.Provider>
-  );
-};
+export const DataContext = createContext(null);
+
+const DataProvider = ({ children }) => {
+    
+    const [html, setHtml] = useState('');
+    const [js, setJs] = useState('');
+    const [css, setCss] = useState('');
+
+    return (
+        <DataContext.Provider value={{
+            html,
+            setHtml,
+            css,
+            setCss,
+            js,
+            setJs
+        }}>
+            {children}
+        </DataContext.Provider>
+    )
+}
 
 export default DataProvider;
-
 // in this file we have make state and export them
+
+

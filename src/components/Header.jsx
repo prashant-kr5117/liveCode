@@ -5,11 +5,12 @@ const Container = styled(AppBar)`
   height: 9vh;
 `;
 const Header = () => {
-  const logo = "../logo.jpg";
+  // const logo = "../logo.jpg";
+  const logo="https://drive.google.com/file/d/1rGgLLtxLyj4CPFyqVUuuZCjpi7oWxpXx/view?usp=sharing";
   return (
     <Container position="static">
       <Toolbar>
-        <img src={logo} alt="L C" style={{ width: "40px" }} />
+        <img src="https://drive.google.com/file/d/1rGgLLtxLyj4CPFyqVUuuZCjpi7oWxpXx/view?usp=sharing" alt="LC" style={{ width: "40px" }} />
       </Toolbar>
     </Container>
   );
